@@ -1,0 +1,336 @@
+{
+  "botToken": "",
+  "botLink": "",
+  "tokenName": "Harmony",
+  "tokenSymbol": "ONE",
+  "initialValue": 0.2,
+  "referralValue": 0.2,
+  "minWithdrawal": 0.2,
+  "captchaEnabled": false,
+  "notifyWithdrawals": 0,
+  "walletTaskId": 5,
+  "tasks": [
+    {
+      "id": 0,
+      "regex": ".*",
+      "noDuplicates": false,
+      "checkTelegram": false
+    },
+    {
+      "id": 1,
+      "regex": ".*",
+      "noDuplicates": false,
+      "checkTelegram": false
+    },
+    {
+      "id": 2,
+      "regex": ".*",
+      "noDuplicates": false,
+      "checkTelegram": false
+    },
+    {
+      "id": 3,
+      "regex": ".*",
+      "noDuplicates": false,
+      "checkTelegram": true,
+      "checkTelegramGroupId": -1001396190698
+    },
+    {
+      "id": 4,
+      "regex": "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])",
+      "noDuplicates": true,
+      "checkTelegram": false
+    },{
+      "id": 5,
+      "regex": "^one1[a-zA-HJ-NP-Z0-9]{25,39}$",
+      "noDuplicates": true,
+      "checkTelegram": false
+    }
+  ],
+  "messages": {
+    "welcome_message": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": true,
+      "text": "<b>%fullname%</b>, вітаю в боті аірдропу від My Crypto World!\nВи отримаєте 0.2 $ONE за участь та 0.2 $ONE за кожного реферала!\n<a href=\"https://coinmarketcap.com/currencies/harmony/\">ONE - дуже перспективна монета на блокчейні Harmony.</a>\n\nВсього буде виплачено 100 $ONE",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "err_inappropriate_start_command": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❌ Ви уже писали /start.\n❕ Якщо Ви хочете виправити Ваші дані, напишіть /restart",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "main_menu": {
+      "entities": [],
+      "parseMode": "HTML",
+      "keyboard": [["\uD83D\uDCB0 Баланс", "\uD83D\uDC65 Реферальне посилання"], ["\uD83D\uDCB3 Вивід", "ℹ️ Інформація"], ["✍️ Виправити вказану інформацію"]],
+      "disableWebPagePreview": false,
+      "text": "❕ Ви знаходитесь в головному меню.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "main_menu_admin": {
+      "entities": [],
+      "parseMode": "HTML",
+      "keyboard": [["\uD83D\uDCB0 Balance", "\uD83D\uDC65 Referral link"], ["\uD83D\uDCB3 Withdraw", "ℹ️ Information"], ["✍️ Resubmit your information"]],
+      "disableWebPagePreview": false,
+      "text": "❕ You are in main menu",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "task_0": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "✅ Виконайте всі завдання, щоб отримати монети $ONE\n\nНатисніть \"Почати\" щоб перейти до завдань",
+      "keyboard": [["✅ Почати"]],
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "incorrect_task_0": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❌ <b>Некоректний ввід</b>\nНатисніть на <b>✅ Приєднатися</b>.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "task_1": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "⭐️ Всього буде виплачено 100 $ONE\n \n\uD83D\uDD39 За участь Ви отримаєте: 0.2 $ONE  \n\uD83D\uDD39 За реферала Ви отримаєте: 0.2 $ONE\n\uD83D\uDCD2 \n \uD83D\uDCC5 Аірдроп закінчиться після виплат на 100 $ONE   \n\uD83C\uDFE6 Початок виплат: через 3 дня після початку аірдропу  \n   \n\uD83D\uDCE2 Правила   \n\n✏️ Обов'язкові завдання:\n\uD83D\uDD39 Приєднатися до каналу в телеграмі <a href=\"https://t.me/+6wE2jQGgpGg4MzIy\">My Crypto World</a>  \n\uD83D\uDD39 Приєднатися до групи в телеграмі <a href=\"https://t.me/+JAc-32qrC24zZjky\">Чат Crypto World</a>",
+      "keyboard": [["✍️Далі"]],
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "incorrect_task_1": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❌ <b>Некоректний ввід</b>",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "task_2": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Приєднайтеся до телеграм каналу <a href=\"https://t.me/+6wE2jQGgpGg4MzIy\">My Crypto World</a>",
+      "keyboard": [["✅ Готово"]],
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "incorrect_task_2": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❌ Схоже, що Ви не приєдналися.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "task_3": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Приєднайтеся до телеграм чату <a href=\"https://t.me/+JAc-32qrC24zZjky\">Чат Crypto World</a>",
+      "keyboard": [["✅ Готово"]],
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "incorrect_task_3": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❌ Схоже, що Ви не приєдналися.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "task_4": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Введіть Вашу Email адресу.",
+      "useKeyboardRemove": true,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "incorrect_task_4": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❌ Ведіть коректу Email адресу.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "task_5": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": true,
+      "text": "❕ Введіть Ваш $ONE адрес.\nЗнайти його можна в Trust Wallet\nІнструкція: https://telegra.ph/Adres-ONE-02-11",
+      "useKeyboardRemove": true,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "incorrect_task_5": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❌ Ви ввели некоректний адрес. Впевніться, що він починається на one1",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "captcha_incorrect": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❌ Неправильна каптча",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "captcha_correct": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "✅ Правильна капча",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "balance": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Ващ баланс: %balance% $ONE",
+      "useKeyboardRemove": false,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "referralLink": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Ваше реферальне посилання:\n%link%\n\n❕ Бот напише Вам, коли хтось приєднається по Вашому посиланню.",
+      "useKeyboardRemove": false,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "withdrawal_closed": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Вивід <b>закритий</b> на даний момент.\n❕ Відкриття буде <b>через 3 дня після початку Airdrop</b>.\n❕ Слідкуйте за новинами в <b>телеграм каналі</b>.",
+      "useKeyboardRemove": false,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "withdrawal": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❕ Введіть кількість для виводу.\n❕ Ваш баланс %balance%",
+      "keyboard": [["/menu"]],
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "invalid_input": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "❌ Ви ввели некоректну інформацію. Спробуйте ще раз.",
+      "useKeyboardRemove": false,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "information": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "text": "Мені було дуже лінь писати тут щось, але код під цю кнопку я написав)0)\nМуд: ненавиджу фронт",
+      "useKeyboardRemove": false,
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "resubmit": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "❕ Використайте /restart\n‼️ <b>Це видалить всю наявну інформацію!</b> ‼️",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "referral_message": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "\uD83D\uDE00 Ви були запрошені %referer%",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "referer_message": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "\uD83D\uDE00 Людина приєдналась по Вашому посиланні.\n❕ Тепер Ваш баланс: %balance%",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "admin_menu": {
+      "entities": [],
+      "parseMode": "HTML",
+      "keyboard": [["Export all users","Export withdrawals"], ["Exit to main menu","Enable/Disable withdrawals"]],
+      "disableWebPagePreview": false,
+      "text": "Admin menu",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "withdrawals_toggle": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "Withdrawals toggled",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "withdrawal_success": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": false,
+      "text": "Заявка на вивід відправлена. Ви отримаєте кошти на Ваш гаманець через 24 години.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "please_complete_captcha_message": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": true,
+      "text": "❕ Введіть капчу.",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    },
+    "bot_is_closed": {
+      "entities": [],
+      "parseMode": "HTML",
+      "disableWebPagePreview": false,
+      "useKeyboardRemove": true,
+      "text": "❌ На даний момент бот закритий ❌",
+      "disableNotification": false,
+      "allowSendingWithoutReply": false
+    }
+  }
+}
